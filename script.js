@@ -4,27 +4,20 @@
 
 //create an array for the numbers 1 through 100
 
-var number=[];
-
-for (var i=0; i<=100; i++){
-		if ((i % 3) == 0){
-		number.push(i.toString());
-		number[i]=number[i].replace(/(\d+)/g, "fizz");
+for (var i=1; i<=100; i++){
+	if (i % 5 == 0 && i % 3 == 0){
+		document.write("fizzbuzz<br/>");
 	}
-else if ((i % 5) == 0){
-		number.push(i.toString());
-		number[i]=number[i].replace(/(\d+)/g, "buzz");
+	else if (i % 3 == 0){
+		document.write("fizz<br/>");
 	}
-else if (((i % 5) == 0) && ((i % 3) == 0)){
-		number.push(i.toString());
-		number[i]=number[i].replace(/(\d+)/g, "fizzbuzz");
+	else if (i % 5 == 0){
+		document.write("buzz<br/>");
 	}
-else {
-		number.push(i.toString());
+	else {
+		document.write(i + "<br/>");
 	}
 }
-
-document.write(number);
 
 //sort through the array using the if statements below and replacing the numbers with their statements if applicable
 
